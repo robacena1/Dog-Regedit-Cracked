@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{9B43446F-89CD-49AB-A93A-AA4722279E93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DOGREGEDIT22</RootNamespace>
+    <AssemblyName>DOGREGEDIT22</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>DOGREGEDIT22.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="Auth\GG_Winform_Example\API.cs" />
+    <Compile Include="Auth\GG_Winform_Example\App.cs" />
+    <Compile Include="Auth\GG_Winform_Example\ApplicationSettings.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Constants.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Encryption.cs" />
+    <Compile Include="Auth\GG_Winform_Example\InfoManager.cs" />
+    <Compile Include="Auth\GG_Winform_Example\OnProgramStart.cs" />
+    <Compile Include="Auth\GG_Winform_Example\Security.cs" />
+    <Compile Include="Auth\GG_Winform_Example\User.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="DOGREGEDIT22_ProcessedByFody.cs" />
+    <Compile Include="dummy\{98cdee0c-d348-484a-96bb-4a68e81841bb}.cs" />
+    <Compile Include="dummy_ptr\{44b7617d-b641-4664-8622-a5027939f377}.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ponto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Costura\costura\dll.compressed" />
+    <EmbeddedResource Include="Costura\costura\pdb.compressed" />
+    <EmbeddedResource Include="Costura\guna\ui2\dll.compressed" />
+    <EmbeddedResource Include="Costura\metadata" />
+    <EmbeddedResource Include="Costura\microsoft\bcl\asyncinterfaces\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\configuration\abstractions\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\configuration\binder\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\configuration\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\dependencyinjection\abstractions\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\dependencyinjection\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\http\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\logging\abstractions\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\logging\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\options\dll.compressed" />
+    <EmbeddedResource Include="Costura\microsoft\extensions\primitives\dll.compressed" />
+    <EmbeddedResource Include="Costura\prometheus\netstandard\dll.compressed" />
+    <EmbeddedResource Include="Costura\prometheus\netstandard\pdb.compressed" />
+    <EmbeddedResource Include="Costura\system\buffers\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\componentmodel\annotations\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\diagnostics\diagnosticsource\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\memory\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\numerics\vectors\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\runtime\compilerservices\unsafe\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\threading\tasks\extensions\dll.compressed" />
+    <EmbeddedResource Include="Costura\system\valuetuple\dll.compressed" />
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="Form2.resources" />
+    <EmbeddedResource Include="Form3.resources" />
+    <EmbeddedResource Include="Form4.resources" />
+    <EmbeddedResource Include="Form5.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="VMD" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
